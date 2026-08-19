@@ -17,18 +17,7 @@ export default function LoyaltyCard({ currentStamps = 0, customerId = "SQ-USER-9
       }}
     >
       
-      <div className="flex flex-col items-center w-full max-w-md mx-auto pt-8 px-4 flex-grow">
-        
-        <div className="mb-6 flex justify-center items-center bg-white/95 backdrop-blur-sm px-6 py-3 rounded-full shadow-sm">
-          <Image
-            src="/assets/fbb9aff9166f788dba2897b3e063991bebafbc77.png"
-            alt="Potato Hut Logo"
-            width={180}
-            height={40}
-            className="object-contain"
-            priority
-          />
-        </div>
+      <div className="flex flex-col items-center w-full max-w-md mx-auto pt-4 px-4 flex-grow">
 
         <div className="relative w-full max-w-[320px] aspect-[320/515] mx-auto overflow-hidden shadow-2xl rounded-xl border border-gray-200">
 
