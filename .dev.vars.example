@@ -1,0 +1,7 @@
+# Cloudflare / wrangler local secrets (copy to .dev.vars — never commit)
+NEXT_PUBLIC_SUPABASE_URL=https://YOUR_PROJECT.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_or_publishable_key
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+LOYALTY_STAMP_THRESHOLD_CENTS=500
+LOYALTY_REDEEM_SECRET=generate-a-long-random-string
+# SQUARE_WEBHOOK_SECRET=

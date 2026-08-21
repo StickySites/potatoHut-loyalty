@@ -1,13 +1,20 @@
-import LoyaltyCard from "../components/LoyaltyCard"; 
+import LoyaltyCard from "../components/LoyaltyCard";
+import { getCustomerStamps, ensureCustomerCard } from "./actions";
+import { DEMO_CUSTOMER_ID, resolveCustomerId } from "../lib/loyalty";
 
-export default function Home() {
-  // You can change currentStamps here to test different amounts!
-  const currentStamps = 3; 
-  const customerId = "SQ-USER-987654321";
+export default async function Home({ searchParams }) {
+  const params = await searchParams;
+  const customerId = resolveCustomerId(
+    params?.customerId || params?.customer_id || DEMO_CUSTOMER_ID
+  );
+
+  // Best-effort create so first visit has a DB row (no-op if env/RPC missing)
+  await ensureCustomerCard(customerId);
+  const currentStamps = await getCustomerStamps(customerId);
 
   return (
-    <main className="w-full min-h-screen p-0 m-0 overflow-x-hidden">
+    <main className="w-full h-dvh p-0 m-0 overflow-hidden">
       <LoyaltyCard currentStamps={currentStamps} customerId={customerId} />
     </main>
   );
-} 
+}

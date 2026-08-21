@@ -1,4 +1,8 @@
 {
+  // Secrets (set via wrangler secret put / Cloudflare Dashboard — never commit):
+  // NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY,
+  // SUPABASE_SERVICE_ROLE_KEY, LOYALTY_STAMP_THRESHOLD_CENTS,
+  // LOYALTY_REDEEM_SECRET, SQUARE_WEBHOOK_SECRET
   "$schema": "node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
   "name": "potatohut-loyalty",
