@@ -11,7 +11,7 @@ export default function TermsPage() {
         <Link href="/" className="text-sm font-semibold text-amber-700 hover:underline">
           ← Back to card
         </Link>
-        <h1 className="mt-6 text-2xl font-bold">Terms & Conditions</h1>
+        <h1 className="mt-6 font-display text-2xl font-normal tracking-tight">Terms & Conditions</h1>
         <p className="mt-4 text-sm leading-relaxed text-gray-600">
           Potato Hut loyalty programme terms and conditions will be published here.
         </p>

@@ -35,7 +35,7 @@ export default function LoyaltyCard({ currentStamps = 0, customerId = "SQ-USER-9
         />
 
         <div className="absolute top-[24.5%] inset-x-0 z-20 px-6 sm:px-8 flex justify-center">
-          <span className="text-sm sm:text-[15px] font-bold text-gray-800 text-center">
+          <span className="text-sm sm:text-[15px] font-heading font-bold text-gray-800 text-center">
             {stamps >= maxEarnedStamps
               ? "You've earned a free meal! "
               : `${maxEarnedStamps - stamps} stamps until your next reward`}
